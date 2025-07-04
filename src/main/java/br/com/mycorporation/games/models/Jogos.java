@@ -1,5 +1,6 @@
 package br.com.mycorporation.games.models;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -25,7 +26,7 @@ public class Jogos {
 	private String desenvolvedor;
 	private String publicaçao;
 	private LocalDate dataLançamento;
-	private Double preço;
+	private BigDecimal preço;
 	@Enumerated(EnumType.STRING)
 	private Categoria categoria;
 	private String classificaçao_indicativa;
@@ -39,7 +40,7 @@ public class Jogos {
 	}
 
 	public Jogos(String nome, String descriçao, String desenvolvedor, String publicaçao, LocalDate dataLançamento,
-			Double preço, Categoria categoria, String classificaçao_indicativa, String linkDownload) {
+			BigDecimal preço, Categoria categoria, String classificaçao_indicativa, String linkDownload) {
 		this.nome = nome;
 		this.descriçao = descriçao;
 		this.desenvolvedor = desenvolvedor;
@@ -112,12 +113,12 @@ public class Jogos {
 	}
 
 
-	public Double getPreço() {
+	public BigDecimal getPreço() {
 		return preço;
 	}
 
 
-	public void setPreço(Double preço) {
+	public void setPreço(BigDecimal preço) {
 		this.preço = preço;
 	}
 
